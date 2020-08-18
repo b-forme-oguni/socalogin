@@ -46,7 +46,6 @@ class AuthController extends Controller
                 "{$service_name}_id" => $social_id ,
                 'name'               => $social_name ,
                 'avatar'             => $social_avatar ,
-                'password'           => 'DUMMY_PASSWORD' ,
             ] );
             $user->save();
             return $user;
