@@ -20,7 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Auth Twitter
-Route::get('auth/twitter', 'Auth\AuthController@TwitterRedirect');
-Route::get('auth/twitter/callback', 'Auth\AuthController@TwitterCallback');
-Route::get('auth/twitter/logout', 'Auth\AuthController@getLogout');
-
+Route::get('auth/{provider}', 'Auth\AuthController@TwitterRedirect');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@TwitterCallback');
+// Route::get('auth/twitter/logout', 'Auth\AuthController@getLogout');

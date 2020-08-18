@@ -16,11 +16,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id')->comment('ID');;
             $table->string('name')->comment('名前');;
-            $table->rememberToken();
             $table->string('avatar')->nullable()->comment('アバター画像');
-            $table->unsignedBigInteger('twitter_id')->nullable()->comment('Twitter ID');
-            $table->unsignedBigInteger('instagram_id')->nullable()->comment('Instagram ID');
-            $table->unsignedBigInteger('google_id')->nullable()->comment('Google ID');
+            $table->string('twitter_id')->nullable()->comment('Twitter ID');
+            $table->string('instagram_id')->nullable()->comment('Instagram ID');
+            $table->string('google_id')->nullable()->comment('Google ID');
             $table->timestamps();
         });
     }
