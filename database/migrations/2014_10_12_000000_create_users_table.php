@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable()->comment('アバター画像');
             $table->string('twitter_id')->nullable()->comment('Twitter ID');
             $table->string('instagram_id')->nullable()->comment('Instagram ID');
+            $table->string('facebook_id')->nullable()->comment('Facebook ID');
             $table->string('google_id')->nullable()->comment('Google ID');
             $table->timestamps();
         });

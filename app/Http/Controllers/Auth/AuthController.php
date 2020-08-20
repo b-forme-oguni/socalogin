@@ -27,16 +27,6 @@ class AuthController extends Controller
         return redirect('/home');
     }
 
-    /**
-     * ログインしたソーシャルアカウントがDBにあるかどうか調べます
-     *
-     * @param   string      $service_name       ( twitter , facebook ... )
-     * @param   string      $social_id          ( 123456789 )
-     * @param   string      $social_avatar      ( https://....... )
-     *
-     * @return  User   $user
-     *
-     */
     protected function first_or_create_social_user(
         string $service_name,
         string $social_id,

@@ -14,7 +14,8 @@
         "laravel/framework": "^6.18.35",
         "laravel/socialite": "^4.4",
         "laravel/tinker": "^2.0",
-        "socialiteproviders/instagram": "^3.0"
+        "socialiteproviders/instagram": "^3.0",
+        "socialiteproviders/manager": "^3.5"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
