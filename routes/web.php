@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Auth Twitter
 Route::get('auth/{provider}', 'Auth\AuthController@TwitterRedirect');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@TwitterCallback');
-// Route::get('auth/twitter/logout', 'Auth\AuthController@getLogout');
+// Route::get('auth/{provider}/logout', 'Auth\AuthController@getLogout');
