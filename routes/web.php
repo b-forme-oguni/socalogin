@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/{any}', function () {
+    return view('app');
+})->where('any', '.*');
+
+
 
 Auth::routes();
 
@@ -22,4 +29,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Auth Twitter
 Route::get('auth/{provider}', 'Auth\AuthController@TwitterRedirect');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@TwitterCallback');
-// Route::get('auth/{provider}/logout', 'Auth\AuthController@getLogout');
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/user', 'UserController@index')->name('user');
+});

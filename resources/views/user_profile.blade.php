@@ -8,13 +8,14 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <div>
+                        <p>
 
-                    <a href="/user">ユーザー情報を表示</a>
+                            {{ Auth::user()->name }}</p>
+                        <p>
+                            <a href="" class=""></a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
